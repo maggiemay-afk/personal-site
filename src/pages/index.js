@@ -1,14 +1,12 @@
 import * as React from "react"
-
-import { MyName } from "../components/MyName"
+import Layout from '../components/Layout'
 
 // markup
 const IndexPage = () => {
   return (
-    <main>
-    <h1>Welcome to Maggie's Website</h1>
+    <Layout pageTitle="Home Page">
     <p>I'm making this with the gatsby tutorial!</p>  
-    </main>
+    </Layout>
   )
 }
 

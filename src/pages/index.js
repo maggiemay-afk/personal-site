@@ -1,18 +1,22 @@
-import * as React from "react"
-import Layout from '../components/Layout'
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react";
+import Layout from '../components/Layout';
+import { Link } from "gatsby";
+import {
+  heading,
+  specialText,
+  paragraph
+} from '../components/layout.module.css';
 
-// markup
+
 const IndexPage = () => {
   return (
-      <Layout pageTitle="Greetings, Azerothians">
-          <h2>Welcome to my personal website</h2>  
-          <StaticImage
-            alt="A most fabulous self portrait of the site owner, Maggie"
-            src="https://picsum.photos/200/300"
-          />
+      <Layout>
+          <h2 className={heading}><Link>WoW!</Link> another personal website <span className={specialText}> ...how original</span></h2>
+          <p className={paragraph}>Hello! That's me on the left, Maggie. I built this website using Gatsby with a combination of 
+            JavaScript (React), HTML, and CSS. Of course, that's only important becuase I'm an applied computing 
+            student and a (hopeful) future software developer. Stick around, only good times here.</p>  
       </Layout>
   )
-}
+};
 
-export default IndexPage
+export default IndexPage;

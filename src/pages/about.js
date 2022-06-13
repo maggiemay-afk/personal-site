@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const AboutPage = () => {
@@ -12,6 +12,6 @@ const AboutPage = () => {
         />
     </Layout>
   )
-}
+};
 
-export default AboutPage
+export default AboutPage;

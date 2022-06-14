@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql, } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/fontawesome-free'
 import { 
   container,
   heading,
@@ -12,6 +14,9 @@ import {
   profilePhoto,
   sideBarNavLink
 } from './layout.module.css';
+
+
+
 
 const Layout = ({pageTitle, children}) => {
   const data = useStaticQuery(graphql`

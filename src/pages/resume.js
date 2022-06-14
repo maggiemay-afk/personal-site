@@ -12,7 +12,7 @@ import {
 const Resume = () => {
     return (
         <Layout>
-            <h2 className={heading}>Resume <span className={specialText}> Updated 06-2022</span></h2>
+            <h2 className={heading}>resume <span className={specialText}> updated 06-2022</span></h2>
             <button className={button}><a href={Resume_pdf} download={true} className={download}>Download as PDF</a>
             </button>
             <StaticImage

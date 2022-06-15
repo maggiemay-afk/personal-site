@@ -11,7 +11,9 @@ import {
 const IndexPage = () => {
   return (
       <Layout>
-          <h1 className={heading}><Link>wow,</Link> another personal website <span className={specialText}> ...how original</span><br></br></h1>
+          <h1 className={heading}><Link>wow,</Link> another personal website</h1> 
+          <span className={specialText}> ...how original</span>
+          <br></br>
           <p className={paragraph}>Hello! That's me on the left, Maggie. I built this website using Gatsby with a combination of 
             JavaScript (React), HTML, and CSS. Of course, that's only important becuase I'm an applied computing 
             student and a (hopeful) future software developer. I have more to share in the about section - have a look. 

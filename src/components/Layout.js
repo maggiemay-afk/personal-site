@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql, } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/fontawesome-free'
+import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
 import { 
   container,
   heading,
@@ -12,10 +12,9 @@ import {
   siteTitle,
   sideBar,
   profilePhoto,
-  sideBarNavLink
+  sideBarNavLink,
+  navButton
 } from './layout.module.css';
-
-
 
 
 const Layout = ({pageTitle, children}) => {
@@ -28,6 +27,7 @@ const Layout = ({pageTitle, children}) => {
     }
   }
 `)
+
 
   return (
       <div className={container}>
@@ -43,29 +43,35 @@ const Layout = ({pageTitle, children}) => {
             width={180}
           />
           <a href="https://github.com/maggiemay-afk" target="_blank" rel="noopener noreferrer" className={sideBarNavLink}>
-              GitHub<br/>
+              <FaGithubSquare /> GitHub<br/>
           </a>
           <a href="https://www.linkedin.com/in/maggie-herms-a68a35181/" target="_blank" rel="noopener noreferrer" className={sideBarNavLink}>
-              LinkedIn
+              <FaLinkedin /> LinkedIn
           </a>
         </div>
         <nav>
           <ul className={navLinks}>
-            <li className={navLinkItem}>
-              <Link to="/" className={navLinkText}>
-                Home
-              </Link>
-            </li>
-            <li className={navLinkItem}>
-              <Link to="/about" className={navLinkText}>
-                About
-              </Link>
-            </li>
-            <li className={navLinkItem}>
-              <Link to="/resume" className={navLinkText}>
-                Resume
-              </Link>
-            </li>
+            <button className={navButton}>
+              <li className={navLinkItem}>
+                <Link to="/" className={navLinkText}>
+                  Home
+                </Link>
+              </li>
+            </button>
+            <button className={navButton}>
+              <li className={navLinkItem}>
+                <Link to="/about" className={navLinkText}>
+                  About
+                </Link>
+              </li>
+            </button>
+            <button className={navButton}>
+              <li className={navLinkItem}>
+                <Link to="/resume" className={navLinkText}>
+                  Resume
+                </Link>
+              </li>
+            </button>
           </ul>
         </nav>
         <main>

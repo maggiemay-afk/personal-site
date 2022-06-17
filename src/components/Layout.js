@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql, } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
+import { GiSwordsEmblem } from '@react-icons/all-files/gi/GiSwordsEmblem';
 import { 
   container,
   heading,
@@ -13,7 +14,9 @@ import {
   sideBar,
   profilePhoto,
   sideBarNavLink,
-  navButton
+  navButton,
+  checklist,
+  checklistTitle
 } from './layout.module.css';
 
 
@@ -28,8 +31,25 @@ const Layout = ({pageTitle, children}) => {
   }
 `)
 
+    const [checkedOne, setCheckedOne] = React.useState(false);
+    const [checkedTwo, setCheckedTwo] = React.useState(false);
+    const [checkedThree, setCheckedThree] = React.useState(false);
 
-  return (
+    const handleChangeOne = () => {
+      setCheckedOne(!checkedOne);
+    };
+
+    const handleChangeTwo = () => {
+      setCheckedTwo(!checkedTwo);
+    };
+
+    const handleChangeThree = () => {
+      setCheckedThree(!checkedThree);
+    };
+
+
+
+    return (
       <div className={container}>
         <title>{pageTitle} | { data.site.siteMetadata.title }</title>
         <div className={sideBar}>
@@ -74,12 +94,35 @@ const Layout = ({pageTitle, children}) => {
             </button>
           </ul>
         </nav>
+        
         <main>
           <h1 className={heading}>{pageTitle}</h1>
           {children}
         </main>
+        <div className={checklist}>
+          <h2 className={checklistTitle}>Checklist: </h2>
+            <Checkbox label="Read the 'About' page" 
+            value={checkedOne} 
+            onChange={handleChangeOne}
+            /><br/>
+            <Checkbox label="Download resume" 
+            value={checkedTwo} 
+            onChange={handleChangeTwo}/><br/>
+            <Checkbox label="Find the sword icon" 
+            value={checkedThree} 
+            onChange={handleChangeThree}/>
+        </div>
       </div>
-  )
+    );
+};
+
+const Checkbox = ({ label, value, onChange }) => {
+  return (
+    <label>
+      <input type="checkbox" checked={value} onChange={onChange} />
+      {label}
+    </label>
+  );
 };
 
 export default Layout;

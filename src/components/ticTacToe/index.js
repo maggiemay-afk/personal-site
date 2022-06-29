@@ -1,14 +1,20 @@
 import * as React from "react";
-import { render } from '@testing-library/react';
-import ReactDOM from 'react-dom/client';
-import './ticTacToe.module.css';
+//import { render } from '@testing-library/react';
+import ReactDOM from 'react-dom';
+import { FaRedoAlt } from '@react-icons/all-files/fa/FaRedoAlt';
 import { Link } from "gatsby";
+import {
+  square,
+  gameStatus,
+  boardRow,
+  button
+
+} from './ticTacToe.module.css';
 
 
 function Square(props) {
   return(
-    <button
-      className="square" onClick={props.onClick}>
+    <button className={square} onClick={props.onClick}>
         {props.value}
     </button>
   );
@@ -39,7 +45,8 @@ function Board () {
   function renderSquare(i) {
     return (
       <Square>
-
+        value={squares[i]};
+        onClick={() => handleClick(i)}; 
       </Square>
     )
   }
@@ -54,24 +61,24 @@ function Board () {
 
   return (
     <div>
-      <div className="status">{status}</div>
-      <div className="board-row">
+      <div className={gameStatus}>{status}</div>
+      <div className={"boardRow :after"}>
         {renderSquare(0)}
         {renderSquare(1)}
         {renderSquare(2)}
       </div>
-      <div className="board-row">
+      <div className={"boardRow :after"}>
         {renderSquare(3)}
         {renderSquare(4)}
         {renderSquare(5)}
       </div>
-      <div className="board-row">
+      <div className={"boardRow :after"}>
         {renderSquare(6)}
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
       <div> 
-        <button className="button" onClick={() => handleResetButton()}>
+        <button className={button} onClick={() => handleResetButton()}>
         <FaRedoAlt/> Reset Game
         </button>
       </div>
@@ -100,6 +107,5 @@ function calculateWinner(squares) {
   }
   return undefined;
 }
-
 
 export default Board;

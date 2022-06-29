@@ -10,7 +10,7 @@ body {
     font-family: Georgia, serif;
     justify-content: flex-end;
     margin-top: 5rem;
-    max-width: 750px;
+    max-width: 700px;
 }
 
 .heading {
@@ -129,8 +129,9 @@ body {
 .checklist {
     position: fixed;
     z-index: 3;
-    bottom:30%;
-    left: 0;
+    top: 40%;
+    right: 0;
+    padding-right: 1.5rem;
     color: white;
     font-size: 1rem;
     padding-left: 1rem;

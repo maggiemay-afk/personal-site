@@ -13,6 +13,7 @@ import {
 
 
 function Square(props) {
+  console.log(props)
   return(
     <button className={square} onClick={props.onClick}>
         {props.value}
@@ -30,7 +31,7 @@ function Board () {
       return;
     }
 
-    newSquares[i] = setSquares.xIsNext ? 'X' : 'O';
+    newSquares[i] = xIsNext ? 'X' : 'O';
     setSquares(newSquares);
     setXIsNext(!xIsNext);
 
@@ -44,10 +45,7 @@ function Board () {
   //fix this 
   function renderSquare(i) {
     return (
-      <Square>
-        value={squares[i]};
-        onClick={() => handleClick(i)}; 
-      </Square>
+      <Square value={squares[i]} onClick={() => handleClick(i)}/>
     )
   }
 
@@ -79,7 +77,7 @@ function Board () {
       </div>
       <div> 
         <button className={button} onClick={() => handleResetButton()}>
-        <FaRedoAlt/> Reset Game
+          <FaRedoAlt/> Reset Game
         </button>
       </div>
     </div>

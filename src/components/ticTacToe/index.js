@@ -51,7 +51,9 @@ function Board () {
 
   const winner = calculateWinner(squares);
   let status;
-  if (winner) {
+  if (winner === 'T') {
+    status = 'Tie Game!';
+  } else if (winner) {
     status = 'Winner: ' + winner;
   } else {
     status = 'Next Player: ' + (xIsNext ? 'X' : 'O');
@@ -103,6 +105,21 @@ function calculateWinner(squares) {
       return squares[a];
     }
   }
+
+  let count = 0;
+  for (let i=0; i < squares.length; i++) {  
+
+    if (!squares[i]) {
+      break;
+    } else {
+      count++;
+    }
+    
+    if (count === 9) {
+      return 'T';
+    }
+  }
+
   return undefined;
 }
 

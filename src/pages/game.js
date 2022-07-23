@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import '../components/layout.module.css';
 import Board from '../components/ticTacToe/index';
 
-const TicTacToePage = () => {
+const GamePage = () => {
   return(
     <Layout>
       <Board/>
@@ -11,4 +11,4 @@ const TicTacToePage = () => {
   )
 };
 
-export default TicTacToePage;
+export default GamePage;

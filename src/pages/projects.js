@@ -25,7 +25,7 @@ const projectPage = () => {
           /> 
           <div className={gridSubcolumn}> 
             <button className={projectButton}>
-              <Link to="/tictactoe" className={projectNavLinkText}>
+              <Link to="/game" className={projectNavLinkText}>
                 <h3>Tic Tac Toe</h3>
               </Link> 
             </button>

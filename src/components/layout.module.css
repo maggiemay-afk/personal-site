@@ -17,6 +17,9 @@ body {
     .container {
         margin-left: 270px;
     }
+    .nav-links {
+        margin-left: 270px;
+    }
 }
 
 .heading {
@@ -49,6 +52,7 @@ body {
     display: flex;
     list-style: none;
     justify-content: flex-end; 
+
 }
 
 .nav-button {
@@ -58,6 +62,11 @@ body {
     padding-left: 1.5rem;
     background-color: #112D32;
     border: none;
+    
+}
+
+.nav-button:hover {
+    background-color: #e85a4f;
 }
 
 .nav-link-item {
@@ -148,6 +157,7 @@ body {
 
 .checklistTitle {
     color: #e85a4f;
+    margin: auto;
 }
 
 .grid-container {
@@ -155,15 +165,42 @@ body {
     column-gap: 50px;
     row-gap: 50px;
     max-width: 600px;
+    grid-auto-rows: 1fr;
 
 }
 
 .grid-item {
-    color: black;
-    border: black;
+    border: #112D32;
+    background-color: #88bdbc;
     border-style: solid;
-    padding: 60px;
+    border-width: .3rem;
+    padding: 20px;
     margin-left: 100px;
-   
+    display:flex;
 
+}
+
+.grid-subcolumn {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    max-width: 280px;
+    line-height: 1.5;
+}
+
+.project-button {
+    background-color: #112D32;
+    color: white;
+    border-style: solid;
+    text-align: center;
+    
+}
+
+.project-nav-link-text {
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    font: bold;
+    text-decoration: none;
+    color: white;
+    
 }

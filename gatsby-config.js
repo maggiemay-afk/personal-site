@@ -5,7 +5,7 @@ module.exports = {
     title: "Maggie Herms"
   },
   plugins: [
-    "gatsby-plugin-Image",
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
   ],
 }

@@ -108,7 +108,7 @@ const Layout = ({pageTitle, children}) => {
         </main>
         <div className={checklist}>
           <h2 className={checklistTitle}>Checklist: </h2>
-            <Checkbox label="Read the 'About' page" 
+            <Checkbox label="Read the About page" 
             value={checkedOne} 
             onChange={handleChangeOne}
             /><br/>

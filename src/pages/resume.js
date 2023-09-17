@@ -17,7 +17,7 @@ const Resume = () => {
             <button className={button}><a href={Resume_Maggie} download={true} className={download}><FaFileDownload /> Download as PDF</a></button>
             <StaticImage
                 alt= "image of Maggie's resume"
-                src= "../images/5-20230Resume.jpg"
+                src= "../images/5-2023-Resume.jpg"
             />
         </Layout>
     )

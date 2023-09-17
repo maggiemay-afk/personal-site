@@ -15,8 +15,6 @@ import {
   profilePhoto,
   sideBarNavLink,
   navButton,
-  checklist,
-  checklistTitle
 } from './layout.module.css';
 
 
@@ -30,24 +28,6 @@ const Layout = ({pageTitle, children}) => {
     }
   }
 `)
-
-    const [checkedOne, setCheckedOne] = React.useState(false);
-    const [checkedTwo, setCheckedTwo] = React.useState(false);
-    const [checkedThree, setCheckedThree] = React.useState(false);
-
-    const handleChangeOne = () => {
-      setCheckedOne(!checkedOne);
-    };
-
-    const handleChangeTwo = () => {
-      setCheckedTwo(!checkedTwo);
-    };
-
-    const handleChangeThree = () => {
-      setCheckedThree(!checkedThree);
-    };
-
-
 
     return (
       <div className={container}>
@@ -87,6 +67,13 @@ const Layout = ({pageTitle, children}) => {
             </button>
             <button className={navButton}>
               <li className={navLinkItem}>
+                <Link to="/education" className={navLinkText}>
+                  Education
+                </Link>
+              </li>
+            </button>
+            <button className={navButton}>
+              <li className={navLinkItem}>
                 <Link to="/resume" className={navLinkText}>
                   Resume
                 </Link>
@@ -106,30 +93,9 @@ const Layout = ({pageTitle, children}) => {
           <h1 className={heading}>{pageTitle}</h1>
           {children}
         </main>
-        <div className={checklist}>
-          <h2 className={checklistTitle}>Checklist: </h2>
-            <Checkbox label="Read the About page" 
-            value={checkedOne} 
-            onChange={handleChangeOne}
-            /><br/>
-            <Checkbox label="Download resume" 
-            value={checkedTwo} 
-            onChange={handleChangeTwo}/><br/>
-            <Checkbox label="Find the sword icon" 
-            value={checkedThree} 
-            onChange={handleChangeThree}/>
-        </div>
       </div>
     );
 };
 
-const Checkbox = ({ label, value, onChange }) => {
-  return (
-    <label>
-      <input type="checkbox" checked={value} onChange={onChange} />
-      {label}
-    </label>
-  );
-};
 
 export default Layout;

@@ -3,18 +3,14 @@ import { Link, useStaticQuery, graphql, } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FaGithubSquare } from '@react-icons/all-files/fa/FaGithubSquare';
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
-import { GiSwordsEmblem } from '@react-icons/all-files/gi/GiSwordsEmblem';
+import ButtonAppBar from './header';
 import { 
   container,
   heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
   siteTitle,
   sideBar,
   profilePhoto,
   sideBarNavLink,
-  navButton,
 } from './layout.module.css';
 
 
@@ -49,46 +45,7 @@ const Layout = ({pageTitle, children}) => {
               <FaLinkedin /> LinkedIn
           </a>
         </div>
-        <nav>
-          <ul className={navLinks}>
-            <button className={navButton}>
-              <li className={navLinkItem}>
-                <Link to="/" className={navLinkText}>
-                  Home
-                </Link>
-              </li>
-            </button>
-            <button className={navButton}>
-              <li className={navLinkItem}>
-                <Link to="/about" className={navLinkText}>
-                  About
-                </Link>
-              </li>
-            </button>
-            <button className={navButton}>
-              <li className={navLinkItem}>
-                <Link to="/education" className={navLinkText}>
-                  Education
-                </Link>
-              </li>
-            </button>
-            <button className={navButton}>
-              <li className={navLinkItem}>
-                <Link to="/resume" className={navLinkText}>
-                  Resume
-                </Link>
-              </li>
-            </button>
-            <button className={navButton}>
-              <li className={navLinkItem}>
-                <Link to="/projects" className={navLinkText}>
-                  Projects
-                </Link>
-              </li>
-            </button>
-          </ul>
-        </nav>
-        
+        <ButtonAppBar></ButtonAppBar>
         <main>
           <h1 className={heading}>{pageTitle}</h1>
           {children}

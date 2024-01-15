@@ -15,6 +15,32 @@ const projectPage = () => {
   return (
     <Layout>
       <div className={gridContainer}>
+
+        <div className={gridItem}> 
+          <StaticImage 
+              alt= "email icon"
+              src= "../images/alliance.png"
+              layout="fixed"
+              height={120}
+              width={120}
+          />
+          <div  className={gridSubcolumn}> 
+            <button className={projectButton}>
+              <Link 
+                to="https://warcraft-trivia-2851b3364c3c.herokuapp.com/" 
+                target="_blank"
+                className={projectNavLinkText}
+              >
+                <h3>Mount Trivia</h3>
+              </Link> 
+            </button>
+            <p>  
+              Built with: TypeScript, Node.js, JavaScript (React), CSS &#38; HTML
+              Utilizes: Blizzard API, OpenAI API
+            </p>
+          </div> 
+        </div>
+
         <div className={gridItem}>
           <StaticImage 
               alt= "tic tac toe photo"
@@ -32,19 +58,7 @@ const projectPage = () => {
             <p>Play a game of tic tac toe!  Built with: JavaScript (React), CSS &#38; HTML</p>
           </div>
         </div>
-        <div className={gridItem}> 
-          <StaticImage 
-              alt= "email icon"
-              src= "../images/emaily.png"
-              layout="fixed"
-              height={120}
-              width={120}
-          />
-          <div  className={gridSubcolumn}> 
-            <p>In Progress:  Udemy course inspired by the idea of automating one of my previous jobs. 
-              Frontend: JavaScript, React &#38; Redux. Backend: JavaScript, NodeJS, Express &#38; MongoDB</p>
-          </div> 
-        </div>
+
       </div>
     </Layout>
   )

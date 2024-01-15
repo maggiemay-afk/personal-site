@@ -4,13 +4,15 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Link from '@mui/material/Link';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import Layout from '../components/Layout';
 import {
   heading,
   specialText,
   paragraph,
-  accordian
+  accordian,
+  gitHubLink
 } from '../components/layout.module.css';
 
 
@@ -26,13 +28,19 @@ const EducationPage = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              APC 300 - Programming I
+               APC 300 - Programming I &emsp;
+              <GitHubIcon></GitHubIcon>
             </AccordionSummary>
             <AccordionDetails>
               Java. Program design and implementation, debugging and testing, 
               simple data types, conditionals, loops, and methods.<br></br>
-              <Link href='https://github.com/maggiemay-afk/introToJava' underline="hover">
-                {'View my course work on GitHub'}
+              <Link 
+                href='https://github.com/maggiemay-afk/introToJava' 
+                underline="hover"
+                target="_blank" 
+                className={gitHubLink}
+              >
+              {'View my course work on GitHub'}
               </Link>
             </AccordionDetails>
           </Accordion>
@@ -70,12 +78,18 @@ const EducationPage = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              APC 350 - Programming II
+              APC 350 - Programming II &emsp;
+              <GitHubIcon></GitHubIcon>
             </AccordionSummary>
             <AccordionDetails>
               Java. Methods, file IO, arrays, abstract data types, classes, GUIs, inheritance, composition.<br></br>
-              <Link href='https://github.com/maggiemay-afk/progTwoJava' underline="hover">
-                {'View my course work on GitHub'}
+              <Link 
+                href='https://github.com/maggiemay-afk/progTwoJava' 
+                underline="hover"
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'View my course work on GitHub'}
               </Link>              
             </AccordionDetails>
           </Accordion>
@@ -130,14 +144,20 @@ const EducationPage = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              APC 390 - Object Oriented Programming
+              APC 390 - Object Oriented Programming &emsp;
+              <GitHubIcon></GitHubIcon>
             </AccordionSummary>
             <AccordionDetails>
               Java. Object-Oriented programming techniques. Classes, interfaces, exception handling, 
               inheritance, polymorphism, overloading, abstract classes and methods, serialization, generics,
               and recursion.<br></br>
-              <Link href='https://github.com/maggiemay-afk/objectOrientedProgramming' underline="hover">
-                {'View my course work on GitHub'}
+              <Link 
+                href='https://github.com/maggiemay-afk/objectOrientedProgramming' 
+                underline="hover" 
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'View my course work on GitHub'}
               </Link>   
             </AccordionDetails>
           </Accordion>
@@ -177,15 +197,21 @@ const EducationPage = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              APC 420 - Computer Security I
+              APC 420 - Computer Security I &emsp;
+              <GitHubIcon></GitHubIcon>
             </AccordionSummary>
             <AccordionDetails>
               Java. Topics cover security and risk management, security engineering, 
               identity and access management, security operations, cryptography, access control models, 
               malicious software, security policies, security models, trust, vulnerability assessment, 
               security standards and evaluation, and secure storage.<br></br>
-              <Link href='https://github.com/maggiemay-afk/CompSec' underline="hover">
-                {'View my course work on GitHub'}
+              <Link 
+                href='https://github.com/maggiemay-afk/CompSec' 
+                underline="hover" 
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'View my course work on GitHub'}
               </Link> 
             </AccordionDetails>
           </Accordion>
@@ -211,16 +237,27 @@ const EducationPage = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              APC 440 - Web Development
+              APC 440 - Web Development &emsp;
+              <GitHubIcon></GitHubIcon>
             </AccordionSummary>
             <AccordionDetails>
               HTML, CSS, JavaScript, Bootstrap, Python, Django, web services, and database integration<br></br>
-              <Link href='https://github.com/maggiemay-afk/webDev' underline="hover">
-                {'View my course work on GitHub'}
+              <Link 
+                href='https://github.com/maggiemay-afk/webDev' 
+                  underline="hover" 
+                  target="_blank"
+                  className={gitHubLink}
+                >
+              {'View my course work on GitHub'}
               </Link>
               <br></br>
-              <Link href='https://github.com/maggiemay-afk/djangoProject' underline="hover">
-                {'View my Django project on GitHub'}
+              <Link 
+                href='https://github.com/maggiemay-afk/djangoProject' 
+                underline="hover" 
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'View my Django project on GitHub'}
               </Link>  
             </AccordionDetails>
           </Accordion>
@@ -271,6 +308,6 @@ const EducationPage = () => {
         </div> 
       </Layout>
   )
-};
+}
 
 export default EducationPage;

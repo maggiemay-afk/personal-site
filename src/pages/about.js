@@ -2,14 +2,16 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import {
   heading,
-  paragraph
+  paragraph,
+  specialText,
+  skills
 } from '../components/layout.module.css'
 
 
 const AboutPage = () => {
   return(
     <Layout>
-      <h1 className={heading}>just the highlights</h1>
+      <h1 className={heading}>about me</h1>
       <p className={paragraph}>My name is Maggie. As a Wisconsin-native, generally pronounced: 'may-gee' with an unnecessary 'y'. 
         I first started teaching myself to code by playing games like TwilioQuest and completing Udemy 
         and Codecademy courses. Eventually, I decided to have someone grade my work and went back to school for an 

@@ -96,6 +96,16 @@ body {
     padding-bottom: 3rem;
 }
 
+.skills{
+    padding: 10px;
+}
+
+.skillsTitle{
+    background-color:#112D32;
+    padding: 1%;
+    border-radius: 15px;
+}
+
 .download {
     text-decoration: none;
     color: black;
@@ -152,4 +162,9 @@ body {
 
 .accordian {
     padding: 50px;
+}
+
+.gitHubLink {
+    color: #e85a4f;
+    line-height: 2.5;
 }

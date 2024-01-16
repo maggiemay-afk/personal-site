@@ -11,8 +11,8 @@ import {
   heading,
   specialText,
   paragraph,
-  accordian,
-  gitHubLink
+  accordion,
+  gitHubLink,
 } from '../components/layout.module.css';
 
 
@@ -21,7 +21,7 @@ const EducationPage = () => {
       <Layout>
         <h1 className={heading}>degree and course information</h1> 
         <span className={specialText}>bachelor of science in applied computing</span>
-        <div className={accordian}>
+        <div className={accordion}>
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}

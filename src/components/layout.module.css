@@ -160,11 +160,11 @@ body {
     color: white;
 }
 
-.accordian {
+.accordion {
     padding: 50px;
 }
 
-.gitHubLink {
+.gitHubLink, .gitHubLink:link, .gitHubLink:visited {
     color: #e85a4f;
     line-height: 2.5;
 }

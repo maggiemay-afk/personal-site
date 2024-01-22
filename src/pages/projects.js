@@ -18,8 +18,41 @@ const projectPage = () => {
 
         <div className={gridItem}> 
           <StaticImage 
-              alt= "email icon"
-              src= "../images/alliance.png"
+              alt= "Alliance Photo"
+              src= "../images/ambiance.jpg"
+              layout="fixed"
+              height={120}
+              width={120}
+          />
+          <div  className={gridSubcolumn}> 
+            <button className={projectButton}>
+              <Link 
+                to="https://ambiance.dev/" 
+                target="_blank"
+                className={projectNavLinkText}
+              >
+                <h3>Ambiance.dev</h3>
+              </Link> 
+            </button>
+            <p>  
+              <strong>Capstone Project, Spring 2024.</strong><br></br> 
+              Updates to Ambiance.dev including: Initialize Firestore database, create administrative UI, enable authentication, add API routes, and more.
+              <br></br>Built with: TypeScript, JavaScript (React), CSS &#38; HTML
+            </p>
+            <Link 
+                href='https://github.com/hermanator608/ambiance' 
+                underline="hover"
+                target="_blank" 
+              >
+              {'See my progress on GitHub'}
+            </Link>
+          </div> 
+        </div>
+        
+        <div className={gridItem}> 
+          <StaticImage 
+              alt= "Alliance Photo"
+              src= "../images/wow-trivia.png"
               layout="fixed"
               height={120}
               width={120}

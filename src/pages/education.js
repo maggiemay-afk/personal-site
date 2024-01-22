@@ -10,7 +10,6 @@ import Layout from '../components/Layout';
 import {
   heading,
   specialText,
-  paragraph,
   accordion,
   gitHubLink,
 } from '../components/layout.module.css';
@@ -302,6 +301,38 @@ const EducationPage = () => {
             <AccordionDetails>
               Review of software engineering practices, project management techniques,
               systems analysis, communication, and project selection and planning.<br></br>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              APC 495 - Capstone Project (Spring 2024) &emsp;
+              <GitHubIcon></GitHubIcon>
+            </AccordionSummary>
+            <AccordionDetails>
+            Updates to Ambiance.dev including: Initialize Firestore database, 
+            create administrative UI, enable authentication, add API routes, and more.<br></br>
+            <Link 
+                href='https://ambiance.dev/' 
+                underline="hover" 
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'Checkout Ambiance.dev'}
+            </Link>  
+            <br></br>            
+            <Link 
+                href='https://github.com/hermanator608/ambiance' 
+                underline="hover" 
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'See my progress on GitHub'}
+            </Link>
             </AccordionDetails>
           </Accordion>
 

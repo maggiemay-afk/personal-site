@@ -221,12 +221,21 @@ const EducationPage = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              APC 430 - Applied Data Structures and Algorithms
+              APC 430 - Applied Data Structures and Algorithms &emsp;
+              <GitHubIcon></GitHubIcon>
             </AccordionSummary>
             <AccordionDetails>
               Java. Abstract data types, dynamic arrays, iterators, linked lists, generics, stacks,
               queues, binary search tree, collections, maps, hashing, graphs, sorting, graphics, 
               web programming, and user interfaces.<br></br>
+              <Link 
+                href='https://github.com/maggiemay-afk/data-structures' 
+                underline="hover" 
+                target="_blank"
+                className={gitHubLink}
+              >
+              {'View my course work on GitHub'}
+              </Link>
             </AccordionDetails>
           </Accordion>
 

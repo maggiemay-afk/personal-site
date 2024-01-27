@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
-import Resume_Maggie from '../downloads/Resume_MaggieHerms_1_2024.pdf';
+import Resume_Maggie from '../downloads/Maggie_Resume_1-24.pdf';
 import { FaFileDownload } from '@react-icons/all-files/fa/FaFileDownload';
 import {
     specialText,
@@ -17,7 +17,7 @@ const Resume = () => {
             <button className={button}><a href={Resume_Maggie} download={true} className={download}><FaFileDownload /> Download as PDF</a></button>
             <StaticImage
                 alt= "image of Maggie's resume"
-                src= "../images/Resume_MaggieHerms_1_2024.jpg"
+                src= "../images/resume.jpg"
             />
         </Layout>
     )

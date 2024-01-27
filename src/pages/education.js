@@ -5,7 +5,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Link from '@mui/material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
-
 import Layout from '../components/Layout';
 import {
   heading,

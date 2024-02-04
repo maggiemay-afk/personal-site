@@ -1,98 +1,55 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia"
+import Typography from "@mui/material/Typography";
+import Button from '@mui/material/Button';
+import { projects } from '../config/projects';
 import {
-  gridContainer,
-  gridItem,
-  gridSubcolumn,
-  projectButton,
-  projectNavLinkText
+  projectTitle
 } from '../components/layout.module.css';
+import { textFieldClasses } from '@mui/material';
 
 
 const projectPage = () => {
   return (
     <Layout>
-      <div className={gridContainer}>
-
-        <div className={gridItem}> 
-          <StaticImage 
-              alt= "Alliance Photo"
-              src= "../images/ambiance.jpg"
-              layout="fixed"
-              height={120}
-              width={120}
+      {projects.map((item) => 
+        <Card sx={{ display: 'flex', margin:7 }}>
+          <CardMedia
+            component="img"
+            sx={{ width: 130 }}
+            image= {item.image}
+            alt={item.imageAlt}
           />
-          <div  className={gridSubcolumn}> 
-            <button className={projectButton}>
-              <Link 
-                to="https://ambiance.dev/" 
-                target="_blank"
-                className={projectNavLinkText}
-              >
-                <h3>Ambiance.dev</h3>
-              </Link> 
-            </button>
-            <p>  
-              <strong>Capstone Project, Spring 2024.</strong><br></br> 
-              Updates to Ambiance.dev including: Initialize Firestore database, create administrative UI, enable authentication, add API routes, and more.
-              <br></br>Built with: TypeScript, JavaScript (React), CSS &#38; HTML
-            </p>
-            <Link 
-                href='https://github.com/hermanator608/ambiance' 
-                underline="hover"
-                target="_blank" 
-              >
-              {'See my progress on GitHub'}
-            </Link>
-          </div> 
-        </div>
-        
-        <div className={gridItem}> 
-          <StaticImage 
-              alt= "Alliance Photo"
-              src= "../images/wow-trivia.png"
-              layout="fixed"
-              height={120}
-              width={120}
-          />
-          <div  className={gridSubcolumn}> 
-            <button className={projectButton}>
-              <Link 
-                to="https://warcraft-trivia-2851b3364c3c.herokuapp.com/" 
-                target="_blank"
-                className={projectNavLinkText}
-              >
-                <h3>Mount Trivia</h3>
-              </Link> 
-            </button>
-            <p>  
-              Built with: TypeScript, Node.js, JavaScript (React), CSS &#38; HTML
-              Utilizes: Blizzard API, OpenAI API
-            </p>
-          </div> 
-        </div>
-
-        <div className={gridItem}>
-          <StaticImage 
-              alt= "tic tac toe photo"
-              src= "../images/ticTacToeBlue.jpg"
-              layout="fixed"
-              height={120}
-              width={120}
-          /> 
-          <div className={gridSubcolumn}> 
-            <button className={projectButton}>
-              <Link to="/game" className={projectNavLinkText}>
-                <h3>Tic Tac Toe</h3>
-              </Link> 
-            </button>
-            <p>Play a game of tic tac toe!  Built with: JavaScript (React), CSS &#38; HTML</p>
-          </div>
-        </div>
-
-      </div>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto' }}>
+              <Typography className={projectTitle} component="div" variant="h5">
+                {item.activeLink === false
+                  ? <>{item.name}</>
+                  : <Button variant="contained" href={item.link} target="_blank" sx={{marginBottom: 2}}>
+                      {item.name}
+                    </Button>
+                }
+              </Typography>
+              {item.subtitle !== false
+              &&<Typography color="text.secondary" variant="overline">{item.subtitle}</Typography>
+              }
+              <Typography variant="subtitle1" color="text.secondary" component="div">
+                {item.description} <strong>Built With: </strong>{item.techStack} 
+                {item.otherTech !== false 
+                  && <><strong> Utilizes: </strong> {item.otherTech}</>
+                }
+              </Typography>
+              <Button color="secondary" href={item.altLink} target="_blank" sx={{marginTop: 1}}>
+                {item.altLinkDesc}
+              </Button>
+            </CardContent>
+          </Box>
+        </Card>
+      )}
     </Layout>
   )
 }

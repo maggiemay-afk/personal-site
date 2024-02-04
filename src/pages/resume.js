@@ -7,7 +7,8 @@ import {
     specialText,
     heading,
     download,
-    button
+    button,
+    resume
     } from '../components/layout.module.css';
 
 const Resume = () => {
@@ -18,6 +19,7 @@ const Resume = () => {
             <StaticImage
                 alt= "image of Maggie's resume"
                 src= "../images/resume.jpg"
+                className={resume}
             />
         </Layout>
     )

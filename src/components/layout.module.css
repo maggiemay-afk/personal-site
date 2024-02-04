@@ -11,7 +11,7 @@ body {
     font-family: Georgia, serif;
     justify-content: flex-end;
     margin-top: 5rem;
-    max-width: 700px;
+    max-width: 800px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -119,49 +119,6 @@ body {
     border: none;
 }
 
-.grid-container {
-    display: grid;
-    column-gap: 50px;
-    row-gap: 50px;
-    max-width: 600px;
-    grid-auto-rows: auto;
-}
-
-.grid-item {
-    border: #112D32;
-    background-color: #88bdbc;
-    border-style: solid;
-    border-width: .3rem;
-    padding: 20px;
-    margin-left: 100px;
-    display:flex;
-    width: auto;
-    height: fit-content;
-}
-
-.grid-subcolumn {
-    display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    max-width: 280px;
-    line-height: 1.5;
-}
-
-.project-button {
-    background-color: #112D32;
-    color: white;
-    border-style: solid;
-    text-align: center;
-}
-
-.project-nav-link-text {
-    font-size: 1rem;
-    font-family: Georgia, serif;
-    font: bold;
-    text-decoration: none;
-    color: white;
-}
-
 .accordion {
     padding: 50px;
 }
@@ -169,4 +126,21 @@ body {
 .gitHubLink, .gitHubLink:link, .gitHubLink:visited {
     color: #e85a4f;
     line-height: 2.5;
+}
+
+.gitHubLink::before{
+    content: "\a";
+    white-space: pre;
+}
+
+.gitHubIcon{
+    padding-left: 10px;
+}
+
+.courseDesc{
+    line-height: normal;
+}
+
+.resume{
+    margin-bottom: 50px;
 }

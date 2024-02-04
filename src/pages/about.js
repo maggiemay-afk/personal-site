@@ -3,8 +3,6 @@ import Layout from '../components/Layout';
 import {
   heading,
   paragraph,
-  specialText,
-  skills
 } from '../components/layout.module.css'
 
 

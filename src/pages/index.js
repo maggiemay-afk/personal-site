@@ -13,7 +13,6 @@ const IndexPage = () => {
   return (
       <Layout>
           <h1 className={heading}>just the highlights</h1> 
-          
           <div className={skills}>
             <div>
               <p className={specialText}>
@@ -44,7 +43,6 @@ const IndexPage = () => {
               </p>         
             </div>
           </div>
-
           <p className={paragraph}>Hello! That's me on the left, Maggie. I built this website using Gatsby (then migrating to Netlify) 
             with a combination of JavaScript (React), HTML, and CSS. Of course, that's only important because I'm an applied computing 
             student and a (hopeful) future software developer. Currently, I'm in my third year of 

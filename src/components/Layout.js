@@ -45,7 +45,7 @@ const Layout = ({pageTitle, children}) => {
             <StaticImage 
               className={profilePhoto}
               alt= "A most fabulous self portrait of the site owner, Maggie"
-              src= "../images/maggie.jpg"
+              src= "../images/profile.jpg"
               layout="fixed"
               height={180}
               width={180}
@@ -53,7 +53,7 @@ const Layout = ({pageTitle, children}) => {
             <a href="https://github.com/maggiemay-afk" target="_blank" rel="noopener noreferrer" className={sideBarNavLink}>
                 <FaGithubSquare /> GitHub<br/>
             </a>
-            <a href="https://www.linkedin.com/in/maggie-herms-a68a35181/" target="_blank" rel="noopener noreferrer" className={sideBarNavLink}>
+            <a href="https://www.linkedin.com/in/maggie-herms/" target="_blank" rel="noopener noreferrer" className={sideBarNavLink}>
                 <FaLinkedin /> LinkedIn
             </a>
           </div>

@@ -8,8 +8,8 @@ export const projects = [
 
   {
     name: "Soundtrack Guessing",
-    activeLink: false,
-    link: false,
+    activeLink: true,
+    link: "https://wow-soundtrack-guesser.web.app/",
     subtitle: "In progress",
     image: globe,
     imageAlt: "Image of a globe",
@@ -28,7 +28,7 @@ export const projects = [
     imageAlt: "Image of Headphones",
     description: "Updates to Ambiance.dev including: Initialize Firestore database, create administrative UI, enable authentication, add API routes, and more.",
     techStack: "TypeScript, JavaScript (React), CSS, HTML.",
-    otherTech: false,
+    otherTech: "React Router.",
     altLink: "https://github.com/hermanator608/ambiance",
     altLinkDesc: "See my progress on GitHub"
   },

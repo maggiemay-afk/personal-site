@@ -7,7 +7,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ButtonAppBar from './header';
 import { 
   container,
-  heading,
   siteTitle,
   sideBar,
   profilePhoto,
@@ -59,7 +58,6 @@ const Layout = ({pageTitle, children}) => {
           </div>
           <ButtonAppBar></ButtonAppBar>
           <main>
-            <h1 className={heading}>{pageTitle}</h1>
             {children}
           </main>
         </div>

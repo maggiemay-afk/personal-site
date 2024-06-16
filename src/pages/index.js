@@ -16,38 +16,41 @@ const IndexPage = () => {
           <div className={skills}>
             <div>
               <p className={specialText}>
+                <strong className={skillsTitle}>Languages:</strong>
+                &nbsp;Java, &nbsp;JavaScript, &nbsp;TypeScript, 
+                &nbsp;HTML, &nbsp;SQL
+              </p>         
+            </div>
+
+            <div>
+              <p className={specialText}>
                 <strong className={skillsTitle}>Skills:</strong>
-                &nbsp; Java, &nbsp; JavaScript, &nbsp; React, 
-                &nbsp; HTML, &nbsp; CSS, &nbsp; SQL
+                &nbsp;Git, &nbsp;Node.js, &nbsp;React.js, 
+                &nbsp;CSS
               </p>         
             </div>
 
             <div>
               <p className={specialText}>
                 <strong className={skillsTitle}>Tools:</strong>
-                &nbsp; Git, &nbsp; GitHub, &nbsp;VSCode, &nbsp; Oracle SQL Developer
+                &nbsp;GitHub, &nbsp;VSCode, &nbsp;Eclipse, &nbsp;Oracle SQL Developer
+                &nbsp;Trello, &nbsp;Microsoft Project,
               </p>         
             </div>
 
             <div>
               <p className={specialText}>
                 <strong className={skillsTitle}>Hire Me:</strong>
-                &nbsp; Entry-level Software Engineer &nbsp; or &nbsp; Internship 
+                &nbsp; Actively seeking employment! 
               </p>         
             </div>
 
-            <div>
-              <p className={specialText}>
-                <strong className={skillsTitle}>Interested In:</strong>
-                &nbsp; Front-end, &nbsp; Back-end, &nbsp; or &nbsp; Full-stack
-              </p>         
-            </div>
+
           </div>
           <p className={paragraph}>Hello! That's me on the left, Maggie. I built this website using Gatsby (then migrating to Netlify) 
             with a combination of JavaScript (React), HTML, and CSS. Of course, that's only important because I'm an applied computing 
-            student and a (hopeful) future software developer. Currently, I'm in my third year of 
-            schooling and looking for internships. I have more to share in the about section and more code 
-            under projects - have a look!
+            student. I graduated in May of 2024 with my BS and am actively seeking entry-level positions or internships.
+            I have more to share in the about section, more code under projects, and relevant coursework under education - stick around and have a look!
           </p>  
       </Layout>
   )

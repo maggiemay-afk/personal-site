@@ -11,18 +11,20 @@ const AboutPage = () => {
     <Layout>
       <h1 className={heading}>about me</h1>
       <p className={paragraph}>My name is Maggie. As a Wisconsin-native, generally pronounced: 'may-gee' with an unnecessary 'y'. 
-        I first started teaching myself to code by playing games like TwilioQuest and completing Udemy 
-        and Codecademy courses. Eventually, I decided to have someone grade my work and went back to school for an 
-        applied computing degree <i>(Expected May 2024)</i>. Emphasis on 'back to school' because I have a previous bachelor's degree in psychology. 
-        So, for me, this is the start of a career swap into tech and this website should serve to document that. 
+        I completed my first Bachelor's degree in Psychology, graduating in 2019. After spending some time 
+        working in the field, I realized that psychology wasn't the career path for me. 
+        Thanks to the Covid-19 pandemic, I had ample time to explore other interests and hobbies of mine. 
+      </p>
+      <p className={paragraph}>
+        I started teaching myself to code through games like TwilioQuest and completing Udemy 
+        and Codecademy courses. I enjoyed the challenge and still found creativity in learning these new skills - that's how I knew this 
+        was the career field for me. Eventually, I decided to have someone else grade my work and went back to school for an applied computing degree.
+        And so begins another career swap into tech! 
       </p>
       <p className={paragraph}>
         Currently, I work as a Database Coordinator for Indiana University, dealing with the nuances of Undergraduate curriculum.
-        In my free time, I enjoy working on personal projects - learning new tools and languages. 
-        Lately, I've been working on a trivia game for one of my favorite RPGs - World of Warcraft.
-        This particular application is built using TypeScript, with Node.js for the backend, and React for the frontend. 
-        Check out the 'Projects' page to see what else i've made and 'Education' to see the courses 
-        I've taken and a sampling of my work on GitHub.
+        In my free time, you can usually find me with a cup of coffee, working on personal projects, playing video games (see you in Azeroth), 
+        gardening, or anything else outdoors. 
       </p>
     </Layout>
   )

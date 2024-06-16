@@ -10,7 +10,6 @@ import { projects } from '../config/projects';
 import {
   projectTitle
 } from '../components/layout.module.css';
-import { textFieldClasses } from '@mui/material';
 
 
 const projectPage = () => {

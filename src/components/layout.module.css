@@ -1,8 +1,7 @@
-
 body {
     background-color: #254E58;
     width: 100%;
-    height:100%;
+    height: 100%;
     margin: 0;
 }
 
@@ -11,51 +10,10 @@ body {
     font-family: Georgia, serif;
     justify-content: flex-end;
     margin-top: 5rem;
-    max-width: 800px;
+    max-width: 700px;
 }
 
-@media screen and (max-width: 1200px) {
-    .container {
-        margin-left: 270px;
-    }
-    .nav-links {
-        margin-left: 270px;
-    }
-}
-
-.heading {
-    color: #e85a4f;
-    font-size: 2.7rem;
-    font-weight: 500;  
-    padding-top: 1rem;
-}
-
-.buttonGroup {
-    overflow: hidden;
-    background-color: #112D32;
-}
-
-.buttonGroupHeader{
-    background-color: #112D32;
-}
-
-.pageButton{
-    color: #112D32;
-}
-
-.special-text {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.site-title {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.side-bar {
+.sideBar {
     position: fixed;
     z-index: 2;
     top: 0;
@@ -71,7 +29,32 @@ body {
     box-shadow: 5px 0 5px #88bdbc;
 }
 
-.profile-photo {
+.heading {
+    color: #e85a4f;
+    font-size: 2.7rem;
+    font-weight: 500;
+    padding-top: 1rem;
+}
+
+.buttonGroup {
+    overflow: hidden;
+    background-color: #112D32;
+}
+
+.specialText {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 2.2rem;
+}
+
+.siteTitle {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.profilePhoto {
     border-radius: 50%;
     border-style: solid;
     border-width: 4px;
@@ -79,7 +62,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.side-bar-nav-link {
+.sideBarNavLink {
     padding-top: 1rem;
     padding-bottom: 0rem;
     color: white;
@@ -96,20 +79,14 @@ body {
     padding-bottom: 3rem;
 }
 
-.skills{
+.skills {
     padding: 10px;
 }
 
-.skillsTitle{
-    background-color:#112D32;
+.skillsTitle {
+    background-color: #112D32;
     padding: 1%;
     border-radius: 15px;
-}
-
-.download {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
 }
 
 .button {
@@ -123,24 +100,54 @@ body {
     padding: 50px;
 }
 
-.gitHubLink, .gitHubLink:link, .gitHubLink:visited {
+.gitHubLink,
+.gitHubLink:link,
+.gitHubLink:visited {
     color: #e85a4f;
     line-height: 2.5;
 }
 
-.gitHubLink::before{
+.gitHubLink::before {
     content: "\a";
     white-space: pre;
 }
 
-.gitHubIcon{
+.gitHubIcon {
     padding-left: 10px;
 }
 
-.courseDesc{
+.courseDesc {
     line-height: normal;
 }
 
-.resume{
-    margin-bottom: 50px;
+@media screen and (min-width: 800px) {
+    .hamburgerMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        margin-left: 270px;
+    }
+
+    .nav-links {
+        margin-left: 270px;
+    }
+} 
+
+@media screen and (max-width: 799px) {
+    .buttonGroup {
+        display: none;
+    }
+
+    .sideBar {
+        display: none;
+    }
+
+    .container {
+        margin-left: 10px;
+        margin-top: 0rem;
+    }
+
 }
